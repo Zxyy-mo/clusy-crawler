@@ -272,7 +272,7 @@ class TestExtractContent:
     def test_balanced_profile_preserves_main_content_heading(self):
         result = extract_content(SAMPLE_HTML, "https://example.com/news/test-article")
         assert result.strategy == "rs-trafilatura"
-        assert result.text.startswith("Hello World")
+        assert result.text.startswith("# Hello World")
         assert "This is a test article" in result.text
 
     def test_handles_garbage(self):

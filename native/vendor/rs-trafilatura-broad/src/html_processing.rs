@@ -1224,7 +1224,8 @@ mod tests {
     }
 
     #[test]
-    fn test_post_cleaning_removes_class() {        let doc = dom::parse(r##"<div><p class="article" id="main">Text</p></div>"##);
+    fn test_post_cleaning_removes_class() {
+        let doc = dom::parse(r##"<div><p class="article" id="main">Text</p></div>"##);
 
         post_cleaning(&doc);
 
